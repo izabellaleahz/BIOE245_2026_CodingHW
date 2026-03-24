@@ -1,10 +1,11 @@
 #!/bin/bash
 
-DATASET_ROOT="/mnt/ResearchPhysics/zz_Qifan_Xu/datasets/PathMNIST"
-OUTPUT_ROOT="/mnt/ResearchPhysics/zz_Qifan_Xu/datasets/PathMNIST_ResNet18"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+DATASET_ROOT="${SCRIPT_DIR}/data/PathMNIST"
+OUTPUT_ROOT="${SCRIPT_DIR}/output"
 
 python ./train_and_eval.py \
     --download \
     --output_root ${OUTPUT_ROOT} \
-    --gpu_ids 2 \
+    --gpu_ids 0 \
     --dataset_root ${DATASET_ROOT}

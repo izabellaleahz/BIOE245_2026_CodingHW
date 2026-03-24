@@ -1,0 +1,13 @@
+# Dataset files (large .npz files)
+data/
+
+# Training output (model weights, TensorBoard logs, CSVs)
+output/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# SLURM logs
+slurm_*.out
+slurm_*.err
